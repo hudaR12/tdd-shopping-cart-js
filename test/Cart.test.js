@@ -13,3 +13,16 @@ describe('Shopping Cart',() =>{
     })
 
 })
+
+it( 'Adding items to cart' ,() => {
+    //setup
+    const cart = new Cart();
+    const item = new Item("Conditioner", 1000, true);
+    let quantity = 1;
+    //act
+    cart.addItems(item,quantity);
+    let expected = item.price * quantity;
+    let res = cart.totalPrice;
+    //assert
+    expect(res).toBe(expected);
+})

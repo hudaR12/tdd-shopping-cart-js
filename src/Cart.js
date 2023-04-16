@@ -9,4 +9,10 @@ module.exports = class Cart {
         return this.items.length;
          };
     
+    addItems = (item , quantity) =>{
+        this.item.quantity = quantity;
+        this.items.push(item);
+        this.totalPrice += item.price * quantity;
+        return this.items;
+     }
 }
