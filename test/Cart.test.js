@@ -36,7 +36,7 @@ it('Returning the number of items in the cart',() => {
     cart.addItems(item1,1);
     cart.addItems(item2,1);
     let res = cart.itemQuantities(cart.items);
-    let expected = ["Conditioner - x1","Soap - x4"]
+    let expected = ["Conditioner - x1","Soap - x1"]
     //assert
     expect(res).toEqual(expected);
 })

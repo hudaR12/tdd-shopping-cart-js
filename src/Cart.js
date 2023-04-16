@@ -18,7 +18,7 @@ module.exports = class Cart {
 
     itemQuantities = (items) => {
      const itemArr = [];
-        for (const items of items) {
+        for (const item of items) {
             itemArr.push(`${item.name} - x${item.quantity}`);
             }
         return itemArr;
