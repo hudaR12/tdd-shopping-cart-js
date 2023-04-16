@@ -1,6 +1,7 @@
 const Cart = require('../src/Cart.js');
 const Item = require('../src/Item.js');
 
+//First AC
 describe('Shopping Cart',() =>{
     it('Empty Cart',() => {
      //Setup   
@@ -14,6 +15,7 @@ describe('Shopping Cart',() =>{
 
 })
 
+//Second AC
 it( 'Adding items to cart' ,() => {
     //setup
     const cart = new Cart();
@@ -27,6 +29,7 @@ it( 'Adding items to cart' ,() => {
     expect(res).toBe(expected);
 })
 
+//Third AC
 it('Returning the number of items in the cart',() => {
     //setup
     let cart = new Cart();
@@ -41,6 +44,7 @@ it('Returning the number of items in the cart',() => {
     expect(res).toEqual(expected);
 })
 
+//Fourth AC
 it('Items with Price and Quantity', () => {
     //setup 
      let cart = new Cart();
@@ -55,6 +59,7 @@ it('Items with Price and Quantity', () => {
      expect(res).toEqual(expected);
  })
  
+ //fifth AC
  it('Total Price' , () =>{
     //setup
     let cart = new Cart();
@@ -69,6 +74,7 @@ it('Items with Price and Quantity', () => {
     expect(res).toEqual(expected);
 })
 
+//Sixth AC
 it('onSale Items' , () =>{
     //setup
     let cart = new Cart();
