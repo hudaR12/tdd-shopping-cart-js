@@ -47,8 +47,8 @@ it('Items with Price and Quantity', () => {
      let item1 = new Item("Conditioner", 1000, true);
      let item2 = new Item("Soap", 800, true);
      //act
-     cart.addItems(item1);
-     cart.addItems(item2);
+     cart.addItems(item1,1);
+     cart.addItems(item2,1);
     //assert
      let res = cart.itemizedList(cart.items);
      let expected = ["Conditioner x1 - $1000","Soap x1 - $800"]
