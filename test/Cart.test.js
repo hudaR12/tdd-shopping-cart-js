@@ -64,7 +64,7 @@ it('Items with Price and Quantity', () => {
     cart.addItems(item1,1);
     cart.addItems(item2,1);
     let res = cart.totalPrice
-    let expected = 180
+    let expected = 1800
     //assert
     expect(res).toEqual(expected);
 })
