@@ -72,7 +72,7 @@ it('Items with Price and Quantity', () => {
 it('onSale Items' , () =>{
     //setup
     let cart = new Cart();
-    let item1 = new Item("Conditioner", 1000, false);
+    let item1 = new Item("Conditioner", 1000, true);
     let item2 = new Item("Soap", 800, false);
     //act
     cart.addItems(item1,1);
