@@ -24,4 +24,8 @@ module.exports = class Cart {
         return itemArr;
         };
 
+        itemizedList = (items) => items.map(
+            item => `${item.name} x${item.quantity} - $${item.price * item.quantity}`
+            );
+
 }
