@@ -7,7 +7,7 @@ describe('Shopping Cart',() =>{
         const cart = new Cart();
         const expected = 0;
     //Exercise
-        const result = cart.getCartItems;
+        const result = cart.getCartItems();
     //Assert
         expect(result).toEqual(expected);
     })

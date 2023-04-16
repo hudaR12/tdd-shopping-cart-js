@@ -6,10 +6,7 @@ module.exports = class Cart {
      }
         
     getCartItems = () => { 
-             return this.items.length;
+        return this.items.length;
          };
-
-
-
-
+    
 }
