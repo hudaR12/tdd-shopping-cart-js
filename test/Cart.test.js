@@ -26,3 +26,17 @@ it( 'Adding items to cart' ,() => {
     //assert
     expect(res).toBe(expected);
 })
+
+it('Returning the number of items in the cart',() => {
+    //setup
+    let cart = new Cart();
+    let item1 = new Item("Conditioner", 1000, true);
+    let item2 = new Item("Soap", 800, true);
+    //act
+    cart.addItems(item1,1);
+    cart.addItems(item2,1);
+    let res = cart.itemQuantities(cart.items);
+    let expected = ["Conditioner - x1","Soap - x4"]
+    //assert
+    expect(res).toEqual(expected);
+})

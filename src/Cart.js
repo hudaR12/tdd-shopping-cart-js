@@ -15,4 +15,13 @@ module.exports = class Cart {
         this.totalPrice += item.price * quantity;
         return this.items;
      }
+
+    itemQuantities = (items) => {
+     const itemArr = [];
+        for (const items of items) {
+            itemArr.push(`${item.name} - x${item.quantity}`);
+            }
+        return itemArr;
+        };
+
 }
