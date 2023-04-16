@@ -55,3 +55,16 @@ it('Items with Price and Quantity', () => {
      expect(res).toEqual(expected);
  })
  
+ it('Total Price' , () =>{
+    //setup
+    let cart = new Cart();
+    let item1 = new Item("Conditioner", 1000, true);
+    let item2 = new Item("Soap", 800, true);
+    //act
+    cart.addItems(item1,1);
+    cart.addItems(item2,1);
+    let res = cart.totalPrice
+    let expected = 180
+    //assert
+    expect(res).toEqual(expected);
+})
