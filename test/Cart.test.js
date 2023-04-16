@@ -68,3 +68,18 @@ it('Items with Price and Quantity', () => {
     //assert
     expect(res).toEqual(expected);
 })
+
+it('onSale Items' , () =>{
+    //setup
+    let cart = new Cart();
+    let item1 = new Item("Conditioner", 1000, false);
+    let item2 = new Item("Soap", 800, false);
+    //act
+    cart.addItems(item1,1);
+    cart.addItems(item2,1);
+    let res = cart.onSaleCheck(cart.items)
+    let expected = ["Conditioner x1 - $1000"]
+    //assert
+    expect(res).toEqual(expected);
+})
+

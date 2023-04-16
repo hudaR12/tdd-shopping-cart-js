@@ -24,8 +24,18 @@ module.exports = class Cart {
         return itemArr;
         };
 
-        itemizedList = (items) => items.map(
+    itemizedList = (items) => items.map(
             item => `${item.name} x${item.quantity} - $${item.price * item.quantity}`
             );
+            
+    onSaleCheck = (items) =>{
+                let onSale =  items.reduce((acc,item)=>{
+                    if(item.onSale){
+                        acc.push(item);
+                    }
+                    return acc;
+                },[]);
+                return this.itemizedList(onSale);
+               }
 
 }
